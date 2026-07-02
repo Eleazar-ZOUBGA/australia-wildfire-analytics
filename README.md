@@ -64,7 +64,3 @@ Le jeu de données inclut automatiquement :
 
 * Les régions converties sous forme de codes abrégés (`NSW`, `NT`, `QL`, `SA`, `TA`, `VI`, `WA`).
 * Des transformations temporelles pour extraire l'année (`Year`) et le nom complet du mois (`Month`) afin de faciliter la lecture des graphiques.
-
-```
-
-```
