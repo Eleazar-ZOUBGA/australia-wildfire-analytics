@@ -1,66 +1,69 @@
 # Australia Wildfire Dashboard
 
-Une application web interactive développée avec **Dash** et **Plotly** pour analyser et visualiser les données historiques des feux de forêt en Australie à partir de 2005.
+An interactive web application developed with **Dash** and **Plotly** to analyze and visualize historical wildfire data in Australia from 2005 onwards.
 
 ---
 
-## Présentation du Projet
-Ce tableau de bord interactif permet d'explorer l'activité des incendies de végétation en Australie. L'utilisateur peut filtrer dynamiquement les données par **région** administrative et par **année** pour analyser deux métriques clés : la superficie moyenne estimée des incendies et le nombre moyen de pixels détectant des feux de végétation.
+## Project Overview
 
-## Fonctionnalités de l'Application
-* **Sélection par Boutons Radio :** Choix de la région australienne (ex: Victoria, New South Wales, Queensland, etc.).
-* **Menu Déroulant (Dropdown) :** Filtrage temporel par année unique présente dans le jeu de données.
-* **Mise à jour en temps réel (Callbacks) :**
-  * **Graphique en secteur (Pie Chart) :** Répartition mensuelle de la superficie moyenne estimée des incendies (`Estimated_fire_area`).
-  * **Graphique en barres (Bar Chart) :** Évolution mensuelle du nombre moyen de pixels détectés pour les feux de végétation présumés (`Count`).
+This interactive dashboard allows users to explore wildfire activity across Australia. Users can dynamically filter the data by **administrative region** and **year** to analyze two key metrics: the average estimated wildfire area and the average number of detected wildfire pixels.
+
+## Application Features
+
+* **Radio Button Selection:** Choose an Australian region (e.g., Victoria, New South Wales, Queensland, etc.).
+* **Dropdown Menu:** Filter the data by a specific year available in the dataset.
+* **Real-Time Updates (Callbacks):**
+  * **Pie Chart:** Displays the monthly distribution of the average estimated wildfire area (`Estimated_fire_area`).
+  * **Bar Chart:** Shows the monthly trend of the average number of detected wildfire pixels (`Count`).
 
 ---
 
-## Configuration et Installation
+## Setup and Installation
 
-### Prérequis
-L'application nécessite **Python 3.8+** ainsi que les bibliothèques suivantes :
+### Prerequisites
+
+The application requires **Python 3.8+** and the following libraries:
+
 * `pandas`
 * `dash`
 * `plotly`
 
 ### Installation
-1. Clonez ce dépôt sur votre machine locale :
-   ```bash
-   git clone [https://github.com/Eleazar-ZOUBGA/australia-wildfire-analytics.git](https://github.com/Eleazar-ZOUBGA/australia-wildfire-analytics.git)
-   cd australia-wildfire-analytics
 
+1. Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/Eleazar-ZOUBGA/australia-wildfire-analytics.git
+cd australia-wildfire-analytics
 ```
 
-2. Installez les dépendances requises via `pip` :
+2. Install the required dependencies using `pip`:
+
 ```bash
 pip install pandas dash plotly
-
 ```
-
-
 
 ---
 
-## Lancement de l'Application
+## Running the Application
 
-Pour démarrer le serveur de développement Dash, exécutez simplement le script Python principal :
+To start the Dash development server, simply run the main Python script:
 
 ```bash
 python3.8 Dash_wildfire.py
-
 ```
 
-Une fois le script lancé, ouvrez votre navigateur web et accédez à l'adresse locale suivante :
-[http://127.0.0.1:8050/](http://127.0.0.1:8050/)
+Once the application is running, open your web browser and navigate to:
+
+http://127.0.0.1:8050/
 
 ---
 
-## Origine des Données
+## Data Source
 
-Les données utilisées proviennent des observations historiques de la NASA (Firms MCD14DL) collectées et hébergées sur le cloud storage d'IBM Skills Network.
+The dataset is based on historical wildfire observations from **NASA FIRMS (MCD14DL)** and is hosted on the **IBM Skills Network Cloud Object Storage**.
 
-Le jeu de données inclut automatiquement :
+The dataset also includes the following preprocessing steps:
 
-* Les régions converties sous forme de codes abrégés (`NSW`, `NT`, `QL`, `SA`, `TA`, `VI`, `WA`).
-* Des transformations temporelles pour extraire l'année (`Year`) et le nom complet du mois (`Month`) afin de faciliter la lecture des graphiques.
+* Australian regions converted into abbreviated state codes (`NSW`, `NT`, `QLD`, `SA`, `TAS`, `VIC`, `WA`).
+* Time-based transformations to extract the **Year** and the full **Month** name, making the visualizations easier to interpret.
