@@ -1,4 +1,4 @@
-# 🇦🇺 Australia Wildfire Dashboard
+# Australia Wildfire Dashboard
 
 Une application web interactive développée avec **Dash** et **Plotly** pour analyser et visualiser les données historiques des feux de forêt en Australie à partir de 2005.
 
